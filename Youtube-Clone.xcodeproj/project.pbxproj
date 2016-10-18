@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		942615FB1DB57A74009A9098 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942615FA1DB57A74009A9098 /* SettingsLauncher.swift */; };
+		942615FD1DB58C56009A9098 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942615FC1DB58C55009A9098 /* SettingsCell.swift */; };
+		948A49C91DB64C2B00C391DF /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A49C81DB64C2A00C391DF /* ApiService.swift */; };
 		94989CFF1DA9BEEA004AE917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94989CFE1DA9BEEA004AE917 /* AppDelegate.swift */; };
 		94989D011DA9BEEA004AE917 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94989D001DA9BEEA004AE917 /* HomeController.swift */; };
 		94989D041DA9BEEB004AE917 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94989D021DA9BEEB004AE917 /* Main.storyboard */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		942615FA1DB57A74009A9098 /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
+		942615FC1DB58C55009A9098 /* SettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		948A49C81DB64C2A00C391DF /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		94989CFB1DA9BEE9004AE917 /* Youtube-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94989CFE1DA9BEEA004AE917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94989D001DA9BEEA004AE917 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -82,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		948A49C71DB64BBB00C391DF /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				948A49C81DB64C2A00C391DF /* ApiService.swift */,
+			);
+			name = ApiService;
+			sourceTree = "<group>";
+		};
 		94989CF21DA9BEE8004AE917 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +119,7 @@
 		94989CFD1DA9BEE9004AE917 /* Youtube-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				948A49C71DB64BBB00C391DF /* ApiService */,
 				94989D351DAAA9C6004AE917 /* Model */,
 				94989D321DAA8645004AE917 /* Controller */,
 				94989D2F1DAA85CF004AE917 /* View */,
@@ -149,6 +164,7 @@
 			children = (
 				94989D301DAA860B004AE917 /* VideoCell.swift */,
 				94989D331DAA881A004AE917 /* MenuBar.swift */,
+				942615FC1DB58C55009A9098 /* SettingsCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -157,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				94989D001DA9BEEA004AE917 /* HomeController.swift */,
+				942615FA1DB57A74009A9098 /* SettingsLauncher.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -308,7 +325,10 @@
 			files = (
 				94989D011DA9BEEA004AE917 /* HomeController.swift in Sources */,
 				94989D371DAAA9DE004AE917 /* Video.swift in Sources */,
+				942615FD1DB58C56009A9098 /* SettingsCell.swift in Sources */,
 				94989D311DAA860B004AE917 /* VideoCell.swift in Sources */,
+				942615FB1DB57A74009A9098 /* SettingsLauncher.swift in Sources */,
+				948A49C91DB64C2B00C391DF /* ApiService.swift in Sources */,
 				94989D2E1DAA8560004AE917 /* Extensions.swift in Sources */,
 				94989CFF1DA9BEEA004AE917 /* AppDelegate.swift in Sources */,
 				94989D341DAA881A004AE917 /* MenuBar.swift in Sources */,
@@ -560,6 +580,7 @@
 				94989D251DA9BEEE004AE917 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94989D261DA9BEEE004AE917 /* Build configuration list for PBXNativeTarget "Youtube-CloneTests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +589,7 @@
 				94989D281DA9BEEE004AE917 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94989D291DA9BEEE004AE917 /* Build configuration list for PBXNativeTarget "Youtube-CloneUITests" */ = {
 			isa = XCConfigurationList;
@@ -576,6 +598,7 @@
 				94989D2B1DA9BEEE004AE917 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
