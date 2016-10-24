@@ -12,8 +12,26 @@ class ApiService: NSObject {
 
     static let sharedInstance = ApiService()
     
-    func fectchVideos(completion: @escaping ([Video]) -> ()){
-        let url = NSURL(string: "https://s3-us-west-2.amazonaws.com/youtubeassets/home.json")!
+    let baseUrl = "https://s3-us-west-2.amazonaws.com/youtubeassets"
+    
+    func fetchVideos(completion: @escaping ([Video]) -> ()){
+        
+        fetchFeedForUrlString(urlString: "\(baseUrl)/home.json", completion: completion)
+    }
+    
+    
+    func fetchTrendingFeed(completion: @escaping ([Video]) -> ()){
+
+        fetchFeedForUrlString(urlString: "\(baseUrl)/trending.json", completion: completion)
+    }
+
+    func fetchSubscriptionFeed(completion: @escaping ([Video]) -> ()){
+        fetchFeedForUrlString(urlString: "\(baseUrl)/subscriptions.json", completion: completion)
+    }
+    
+    func fetchFeedForUrlString(urlString: String, completion: @escaping ([Video]) -> ()){
+        
+        let url = NSURL(string: urlString)!
         
         URLSession.shared.dataTask(with: url as URL) { (data, responseUrl, error) -> Void in
             if error != nil{
@@ -22,29 +40,17 @@ class ApiService: NSObject {
             }
             
             do{
-                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
-                
-                var videos = [Video]()
-                
-                for dictionary in json as! [[String: AnyObject]]{
+                if let wrappedData = data{
+                    if let jsonDictionaries = try JSONSerialization.jsonObject(with: wrappedData, options: .mutableContainers) as? [[String: AnyObject]]{
+                        
+                        let videos = jsonDictionaries.map({return Video(dictionary: $0)})
+                        
+                        DispatchQueue.main.async {
+                            completion(videos)
+                        }
+                        
+                    }
                     
-                    let video = Video()
-                    video.title = dictionary["title"] as? String
-                    video.thumbnailImageName =
-                        dictionary["thumbnail_image_name"] as? String
-                    
-                    let channel = Channel()
-                    let channelDic = dictionary["channel"] as? [String:AnyObject]
-                    channel.name = channelDic?["name"] as? String
-                    print("notThisWait\(channelDic?["name"] as? String)")
-                    channel.profileImageName = channelDic?["profile_image_name"] as? String
-                    
-                    video.channel = channel
-                    
-                    videos.append(video)
-                }
-                DispatchQueue.main.async {
-                    completion(videos)
                 }
                 
                 
@@ -54,4 +60,5 @@ class ApiService: NSObject {
             
             }.resume()
     }
+
 }

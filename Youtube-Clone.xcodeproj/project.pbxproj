@@ -10,6 +10,10 @@
 		942615FB1DB57A74009A9098 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942615FA1DB57A74009A9098 /* SettingsLauncher.swift */; };
 		942615FD1DB58C56009A9098 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942615FC1DB58C55009A9098 /* SettingsCell.swift */; };
 		948A49C91DB64C2B00C391DF /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A49C81DB64C2A00C391DF /* ApiService.swift */; };
+		948A49CE1DB6A38A00C391DF /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A49CD1DB6A38800C391DF /* FeedCell.swift */; };
+		948A49D41DB6D31C00C391DF /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A49D31DB6D31A00C391DF /* TrendingCell.swift */; };
+		948A49D81DB6DDAA00C391DF /* SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A49D71DB6DDA900C391DF /* SubscriptionCell.swift */; };
+		948A49DE1DB8D9DA00C391DF /* VideoLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A49DD1DB8D9D500C391DF /* VideoLauncher.swift */; };
 		94989CFF1DA9BEEA004AE917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94989CFE1DA9BEEA004AE917 /* AppDelegate.swift */; };
 		94989D011DA9BEEA004AE917 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94989D001DA9BEEA004AE917 /* HomeController.swift */; };
 		94989D041DA9BEEB004AE917 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94989D021DA9BEEB004AE917 /* Main.storyboard */; };
@@ -44,6 +48,10 @@
 		942615FA1DB57A74009A9098 /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
 		942615FC1DB58C55009A9098 /* SettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		948A49C81DB64C2A00C391DF /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		948A49CD1DB6A38800C391DF /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		948A49D31DB6D31A00C391DF /* TrendingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
+		948A49D71DB6DDA900C391DF /* SubscriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionCell.swift; sourceTree = "<group>"; };
+		948A49DD1DB8D9D500C391DF /* VideoLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoLauncher.swift; sourceTree = "<group>"; };
 		94989CFB1DA9BEE9004AE917 /* Youtube-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94989CFE1DA9BEEA004AE917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94989D001DA9BEEA004AE917 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -155,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				94989D2D1DAA8560004AE917 /* Extensions.swift */,
+				948A49DD1DB8D9D500C391DF /* VideoLauncher.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -165,6 +174,9 @@
 				94989D301DAA860B004AE917 /* VideoCell.swift */,
 				94989D331DAA881A004AE917 /* MenuBar.swift */,
 				942615FC1DB58C55009A9098 /* SettingsCell.swift */,
+				948A49CD1DB6A38800C391DF /* FeedCell.swift */,
+				948A49D31DB6D31A00C391DF /* TrendingCell.swift */,
+				948A49D71DB6DDA900C391DF /* SubscriptionCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -324,6 +336,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				94989D011DA9BEEA004AE917 /* HomeController.swift in Sources */,
+				948A49CE1DB6A38A00C391DF /* FeedCell.swift in Sources */,
+				948A49D41DB6D31C00C391DF /* TrendingCell.swift in Sources */,
 				94989D371DAAA9DE004AE917 /* Video.swift in Sources */,
 				942615FD1DB58C56009A9098 /* SettingsCell.swift in Sources */,
 				94989D311DAA860B004AE917 /* VideoCell.swift in Sources */,
@@ -331,6 +345,8 @@
 				948A49C91DB64C2B00C391DF /* ApiService.swift in Sources */,
 				94989D2E1DAA8560004AE917 /* Extensions.swift in Sources */,
 				94989CFF1DA9BEEA004AE917 /* AppDelegate.swift in Sources */,
+				948A49DE1DB8D9DA00C391DF /* VideoLauncher.swift in Sources */,
+				948A49D81DB6DDAA00C391DF /* SubscriptionCell.swift in Sources */,
 				94989D341DAA881A004AE917 /* MenuBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
